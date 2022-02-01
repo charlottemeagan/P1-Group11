@@ -7,3 +7,4 @@ public class NgramTest {
     void test() {
         fail("Not yet implemented");
     }
+}
