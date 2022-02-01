@@ -1,4 +1,9 @@
 import static org.junit.Assert.fail;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import org.junit.Test;
 
 public class UnitTesting {
@@ -10,7 +15,7 @@ public class UnitTesting {
 
         try{
             // -read from filePooped with Scanner class
-            Scanner sc = new Scanner(file);
+            Scanner sc = new Scanner(csvFile);
 
             // skip first line
             sc.next();
@@ -19,8 +24,7 @@ public class UnitTesting {
             while(sc.hasNext()){
                 //read single line, put in string
                 String[] line = sc.next().split(",");
-                Assert.assertTrue(line.length(), 2);
-
+                assertTrue(line.length, 2);
             }
             // after loop, close scanner
             sc.close();
